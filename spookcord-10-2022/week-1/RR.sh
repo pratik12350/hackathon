@@ -37,7 +37,12 @@ function get_file {
 
 function check_file {
   if [[ -f $file_name ]]; then
-    echo -e "${GREEN}${file_name} Loaded! Starting game...${NOCOLOR}"
+    if [[ $(basename $0) == $file_name ]]; then
+      echo -e "${RED}LOL! You can't kill me! HAHAHA"
+      exit 1
+    else
+      echo -e "${GREEN}${file_name} Loaded! Starting game...${NOCOLOR}"
+    fi
     sleep 2
     clear
   else
