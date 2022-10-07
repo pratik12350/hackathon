@@ -13,6 +13,7 @@ Language Used: BASH
 
 ## How to play
 > Click [here](https://replit.com) to run on Replit or Download the game [file](https://github.com/pratik12350/hackathon/blob/main/spookcord-10-2022/week-1/RR.sh)
+
 > Now run `bash RR.sh` and enjoy :)
 
 Hope you liked it!
