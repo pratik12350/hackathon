@@ -1,0 +1,3 @@
+run = ["bash", "RR.sh"]
+
+entrypoint = "RR.sh"
