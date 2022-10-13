@@ -1,5 +1,5 @@
 const {Command} = require("@sapphire/framework");
-const { MessageEmbed } = require("discord.js");
+const { MessageEmbed, MessageActionRow, MessageButton } = require("discord.js");
 
 class HelpCommand extends Command {
   constructor(context, options) {
@@ -43,8 +43,17 @@ class HelpCommand extends Command {
       .setColor("#2F3136")
       .setFooter({ text: "Made by Pratik#6965" })
 
+    const commandsBtn = new MessageButton()
+      .setLabel("Commands")
+      .setStyle("PRIMARY")
+      .setCustomId("help-commands")
+
+    const btnRow = new MessageActionRow()
+      .addComponents(commandsBtn)
+
     interaction.reply({
-      embeds: [embed]
+      embeds: [embed],
+      components: [btnRow]
     })
   }
 }
