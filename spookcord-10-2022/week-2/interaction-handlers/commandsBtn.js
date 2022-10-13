@@ -31,6 +31,10 @@ class ButtonHandler extends InteractionHandler {
         {
           name: "/apod",
           description: "Astronomy Picture of The Day"
+        },
+        {
+          name: "/neo",
+          description: "Current Near Earth Objects (NEO)"
         }
       ]
     };

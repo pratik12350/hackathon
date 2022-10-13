@@ -1,5 +1,6 @@
 require("colors");
 const { Listener } = require("@sapphire/framework");
+const logger = require("../utils/logger");
 
 class ReadyListener extends Listener {
   constructor(context, options) {
@@ -19,7 +20,8 @@ class ReadyListener extends Listener {
       activities: [{ name: "Learn more about astronomy - 🎃" }],
       status: "idle"
     })
-    console.log(`${client.user.username}`.blue, `is Up! 🎃`.green)
+
+    logger.success("Neutron is now online!");
   }
 }
 
